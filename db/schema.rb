@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230211635) do
+ActiveRecord::Schema.define(version: 20140101181428) do
+
+  create_table "topic_hierarchies", id: false, force: true do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "topic_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "topic_anc_desc_udx", unique: true
+  add_index "topic_hierarchies", ["descendant_id"], name: "topic_desc_idx"
 
   create_table "topics", force: true do |t|
-    t.string   "title"
+    t.string   "name"
+    t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ancestry"
   end
+
+  add_index "topics", ["parent_id"], name: "index_topics_on_parent_id"
 
 end
