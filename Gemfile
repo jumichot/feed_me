@@ -12,6 +12,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'closure_tree'
 
 gem 'rails_admin'
+
+gem 'omniauth-pocket'
+gem 'pocket-ruby'
+
 group :doc do
   gem 'sdoc', require: false
 end
