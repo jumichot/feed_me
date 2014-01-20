@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://getpocket.com/v3/get
+    body:
+      encoding: UTF-8
+      string: '{"state":"archive","sort":"newest","consumer_key":"22380-ac19ebaa41448247d8b0d8e0","access_token":"d68e4c86-7556-4f70-ac42-ad60dc"}'
+    headers:
+      User-Agent:
+      - Pocket Ruby Gem 0.0.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jan 2014 22:02:36 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="ALL CURa ADMa DEVa OUR IND UNI COM NAV INT STA
+        PRE"
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=6rnm9lmla2c051p36iqk2ag6r1; path=/
+      Status:
+      - 200 OK
+      X-Limit-Key-Limit:
+      - '10000'
+      X-Limit-Key-Remaining:
+      - '9990'
+      X-Limit-Key-Reset:
+      - '866'
+      X-Limit-User-Limit:
+      - '320'
+      X-Limit-User-Remaining:
+      - '310'
+      X-Limit-User-Reset:
+      - '866'
+      X-Source:
+      - Pocket
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":1,"complete":1,"list":{"141879533":{"item_id":"141879533","resolved_id":"141879533","given_url":"http:\/\/pym.me\/posts\/8-conseils-pour-jeunes-developpeurs\/","given_title":"8
+        conseils pour jeunes d\u00e9veloppeurs","favorite":"1","status":"1","time_added":"1330550189","time_updated":"1371237412","time_read":"1371237412","time_favorited":"1371237411","sort_id":0,"resolved_title":"8
+        conseils pour jeunes d\u00e9veloppeurs","resolved_url":"http:\/\/pym.me\/posts\/8-conseils-pour-jeunes-developpeurs\/","excerpt":"Parce
+        que je trouvais que plus \u00e7a serait trop et que j\u2019aime bien ce chiffre,
+        voici 8 conseils g\u00e9n\u00e9raux que devrait suivre tout bon d\u00e9veloppeur.
+        Ou du moins, ceux qui aspirent \u00e0 le devenir.  N. B. Ceci n\u2019est pas
+        un article technique.","is_article":"1","is_index":"0","has_video":"0","has_image":"0","word_count":"1968"},"141956406":{"item_id":"141956406","resolved_id":"141956406","given_url":"http:\/\/blog.toutielicious.fr\/2012\/02\/16\/un-petit-retour-sur-les-rails-2\/","given_title":"Un
+        petit retour sur les rails \u00ab Toutielicious","favorite":"0","status":"1","time_added":"1330529591","time_updated":"1371237273","time_read":"1371237273","time_favorited":"0","sort_id":1,"resolved_title":"Un
+        petit retour sur les rails","resolved_url":"http:\/\/blog.toutielicious.fr\/2012\/02\/16\/un-petit-retour-sur-les-rails-2\/","excerpt":"Pr\u00e9-requis
+        : Attention, article fortement orient\u00e9 technique ;) Ce n\u2019est pas
+        un tutoriel d\u2019apprentissage de Rails et je pars du principe que les bases
+        de Ruby et Rails sont acquises.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"976"},"362386482":{"item_id":"362386482","resolved_id":"362386482","given_url":"http:\/\/blog.envylabs.com\/post\/50589070360\/understanding-node-js","given_title":"Blog
+        :: Envy Labs, Understanding Node.js","favorite":"0","status":"1","time_added":"1370593161","time_updated":"1371233188","time_read":"1371233188","time_favorited":"0","sort_id":2,"resolved_title":"Blog
+        : Envy Labs, Understanding Node.js","resolved_url":"http:\/\/blog.envylabs.com\/post\/50589070360\/understanding-node-js","excerpt":"Node.js
+        is a framework for writing server-side JavaScript applications. It is built
+        on top of the V8 JavaScript runtime and uses an event-driven, non-blocking
+        I\/O model that makes it perfect for data-intensive, real-time applications.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"1325"},"370576797":{"item_id":"370576797","resolved_id":"365994595","given_url":"https:\/\/www.hackerrank.com\/rating?utm_source=reminder&utm_medium=mail&utm_campaign=rating","given_title":"Guess
+        the rating on Hacker Rank","favorite":"0","status":"1","time_added":"1370182793","time_updated":"1370183053","time_read":"1370183053","time_favorited":"0","sort_id":3,"resolved_title":"Guess
+        the rating","resolved_url":"https:\/\/www.hackerrank.com\/rating","excerpt":"Inside
+        is a brain teaser for all the Machine Learning enthusiasts. We present you
+        one of the finest AI Challenges we have ever hosted. This time we have real
+        data from a rare source Topcoder. This is also an actual application that
+        you will end up using if you are an avid programmer.","is_article":"1","is_index":"1","has_video":"0","has_image":"1","word_count":"261"},"61478":{"item_id":"61478","resolved_id":"61478","given_url":"http:\/\/cssremix.com\/","given_title":"CSSRemix","favorite":"0","status":"1","time_added":"1357334763","time_updated":"1357334839","time_read":"1357334838","time_favorited":"0","sort_id":4,"resolved_title":"Redirecting","resolved_url":"http:\/\/cssremix.com\/","excerpt":"","is_article":"0","is_index":"1","has_video":"0","has_image":"0","word_count":"0"},"139141952":{"item_id":"139141952","resolved_id":"139141952","given_url":"http:\/\/designbeep.com\/2012\/02\/18\/25-free-minimal-and-clean-style-xhtmlcss-website-templates\/","given_title":"25
+        Free Minimal and Clean Style XHTML\/CSS Website Templates | Design Inspir","favorite":"0","status":"1","time_added":"1329844717","time_updated":"1330294532","time_read":"1329845429","time_favorited":"0","sort_id":5,"resolved_title":"25
+        Free Minimal and Clean Style XHTML\/CSS Website Templates","resolved_url":"http:\/\/designbeep.com\/2012\/02\/18\/25-free-minimal-and-clean-style-xhtmlcss-website-templates\/","excerpt":"If
+        you want to build a website fast and easy then the solution is free website
+        templates.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"192"},"73105002":{"item_id":"73105002","resolved_id":"73105002","given_url":"http:\/\/www.csstemplatesfree.org\/tag\/minimalist","given_title":"Minimalist
+        \u2014 Free CSS\/HTML Templates","favorite":"0","status":"1","time_added":"1329844734","time_updated":"1329846118","time_read":"1329845424","time_favorited":"0","sort_id":6,"resolved_title":"Minimalist
+        \u2014 Free CSS\/HTML Templates","resolved_url":"http:\/\/www.csstemplatesfree.org\/tag\/minimalist","excerpt":"","is_article":"0","is_index":"1","has_video":"0","has_image":"0","word_count":"0"},"85922474":{"item_id":"85922474","resolved_id":"85922474","given_url":"http:\/\/www.imdb.com\/title\/tt1796960\/","given_title":"Homeland
+        (TV Series 2011) - IMDb","favorite":"0","status":"1","time_added":"1319563872","time_updated":"1320066722","time_read":"1320066722","time_favorited":"0","sort_id":7,"resolved_title":"Homeland
+        (TV Series 2011\u2013 )","resolved_url":"http:\/\/www.imdb.com\/title\/tt1796960\/","excerpt":"Carrie
+        Mathison, a CIA operations officer, is on probation after carrying out an
+        unauthorized operation in Iraq. As a result, she has been reassigned to the
+        Counter terrorism center. Whilst in Iraq, she was warned that an American
+        prisoner had been turned by Al-Qaeda. When Nicholas Brody, a U.S.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"93"},"111976096":{"item_id":"111976096","resolved_id":"111976098","given_url":"http:\/\/www.suchablog.com\/de-sublimes-images-filmees-avec-la-nouvelle-gopro-hd-hero-2?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Feed%3A+suchablog+%28Suchablog%29","given_title":"De
+        sublimes images film\u00e9es avec la nouvelle GoPro HD Hero 2 | Suchablog","favorite":"0","status":"1","time_added":"1319563480","time_updated":"1319785390","time_read":"1319657909","time_favorited":"0","sort_id":8,"resolved_title":"De
+        sublimes images film\u00e9es avec la nouvelle GoPro HD Hero 2","resolved_url":"http:\/\/www.suchablog.com\/de-sublimes-images-filmees-avec-la-nouvelle-gopro-hd-hero-2","excerpt":"A
+        l\u2019occasion de la sortie de sa nouvelle cam\u00e9ra HD Hero 2, la soci\u00e9t\u00e9
+        GoPro vient de publier une vid\u00e9o compilant de sublimes images nous montrant
+        l\u2019utilisation de cette cam\u00e9ra dans diff\u00e9rents sports.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"228"},"78928423":{"item_id":"78928423","resolved_id":"78928423","given_url":"http:\/\/www.vtk.ugent.be\/uploads\/djangoles\/djangoles-tutorial.pdf","given_title":"www.vtk.ugent.be\/uploads\/djangoles\/djangoles-tutorial.pdf","favorite":"0","status":"1","time_added":"1319266220","time_updated":"1319743952","time_read":"1319657893","time_favorited":"0","sort_id":9,"resolved_title":"","resolved_url":"http:\/\/www.vtk.ugent.be\/uploads\/djangoles\/djangoles-tutorial.pdf","excerpt":"","is_article":"0","is_index":"0","has_video":"0","has_image":"0","word_count":"0"},"862910":{"item_id":"862910","resolved_id":"862910","given_url":"https:\/\/docs.djangoproject.com\/en\/dev\/intro\/tutorial01\/","given_title":"Django
+        | Writing your first Django app, part 1 | Django documentation","favorite":"0","status":"1","time_added":"1319266331","time_updated":"1319824013","time_read":"1319448511","time_favorited":"0","sort_id":10,"resolved_title":"Writing
+        your first Django app, part 1\u00b6","resolved_url":"https:\/\/docs.djangoproject.com\/en\/dev\/intro\/tutorial01\/","excerpt":"If
+        this is your first time using Django, you\u2019ll have to take care of some
+        initial setup.","is_article":"1","is_index":"0","has_video":"0","has_image":"0","word_count":"3875"},"48871106":{"item_id":"48871106","resolved_id":"48871106","given_url":"http:\/\/www.siteduzero.com\/tutoriel-3-329045-developpez-vos-applications-web-avec-django.html","given_title":"D\u00e9veloppez
+        vos applications web avec Django","favorite":"0","status":"1","time_added":"1319266348","time_updated":"1324146245","time_read":"1319306277","time_favorited":"0","sort_id":11,"resolved_title":"D\u00e9veloppez
+        vos applications web avec Django","resolved_url":"http:\/\/www.siteduzero.com\/tutoriel-3-329045-developpez-vos-applications-web-avec-django.html","excerpt":"Vous
+        \u00eates attir\u00e9 par le d\u00e9veloppement internet ? Vous ne savez pas
+        comment cr\u00e9er un site internet ? Vous connaissez Python et aimeriez bien
+        d\u00e9velopper vos sites avec ? Django ! Bonjour \u00e0 vous, ami z\u00e9ro.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"149"}},"since":1390255356}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2014 22:02:36 GMT
+recorded_with: VCR 2.8.0

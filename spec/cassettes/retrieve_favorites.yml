@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://getpocket.com/v3/get
+    body:
+      encoding: UTF-8
+      string: '{"favorite":1,"sort":"newest","consumer_key":"22380-ac19ebaa41448247d8b0d8e0","access_token":"d68e4c86-7556-4f70-ac42-ad60dc"}'
+    headers:
+      User-Agent:
+      - Pocket Ruby Gem 0.0.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jan 2014 22:02:32 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="ALL CURa ADMa DEVa OUR IND UNI COM NAV INT STA
+        PRE"
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=ts6vetlga25ov3magjjc6gm2c0; path=/
+      Status:
+      - 200 OK
+      X-Limit-Key-Limit:
+      - '10000'
+      X-Limit-Key-Remaining:
+      - '9994'
+      X-Limit-Key-Reset:
+      - '870'
+      X-Limit-User-Limit:
+      - '320'
+      X-Limit-User-Remaining:
+      - '314'
+      X-Limit-User-Reset:
+      - '870'
+      X-Source:
+      - Pocket
+      Content-Length:
+      - '900'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":1,"complete":1,"list":{"141879533":{"item_id":"141879533","resolved_id":"141879533","given_url":"http:\/\/pym.me\/posts\/8-conseils-pour-jeunes-developpeurs\/","given_title":"8
+        conseils pour jeunes d\u00e9veloppeurs","favorite":"1","status":"1","time_added":"1330550189","time_updated":"1371237412","time_read":"1371237412","time_favorited":"1371237411","sort_id":0,"resolved_title":"8
+        conseils pour jeunes d\u00e9veloppeurs","resolved_url":"http:\/\/pym.me\/posts\/8-conseils-pour-jeunes-developpeurs\/","excerpt":"Parce
+        que je trouvais que plus \u00e7a serait trop et que j\u2019aime bien ce chiffre,
+        voici 8 conseils g\u00e9n\u00e9raux que devrait suivre tout bon d\u00e9veloppeur.
+        Ou du moins, ceux qui aspirent \u00e0 le devenir.  N. B. Ceci n\u2019est pas
+        un article technique.","is_article":"1","is_index":"0","has_video":"0","has_image":"0","word_count":"1968"}},"since":1390255352}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2014 22:02:32 GMT
+recorded_with: VCR 2.8.0

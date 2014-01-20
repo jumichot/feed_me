@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://getpocket.com/v3/get
+    body:
+      encoding: UTF-8
+      string: '{"tag":"ruby","sort":"newest","consumer_key":"22380-ac19ebaa41448247d8b0d8e0","access_token":"d68e4c86-7556-4f70-ac42-ad60dc"}'
+    headers:
+      User-Agent:
+      - Pocket Ruby Gem 0.0.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 20 Jan 2014 22:02:33 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="ALL CURa ADMa DEVa OUR IND UNI COM NAV INT STA
+        PRE"
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=ajr7e7034e04rpajsspd2edrl5; path=/
+      Status:
+      - 200 OK
+      X-Limit-Key-Limit:
+      - '10000'
+      X-Limit-Key-Remaining:
+      - '9993'
+      X-Limit-Key-Reset:
+      - '869'
+      X-Limit-User-Limit:
+      - '320'
+      X-Limit-User-Remaining:
+      - '313'
+      X-Limit-User-Reset:
+      - '869'
+      X-Source:
+      - Pocket
+      Content-Length:
+      - '2943'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":1,"complete":1,"list":{"522271957":{"item_id":"522271957","resolved_id":"522271957","given_url":"http:\/\/www.camilleroux.com\/articles\/","given_title":"Articles
+        | Camille Roux","favorite":"0","status":"0","time_added":"1389619774","time_updated":"1390253330","time_read":"0","time_favorited":"0","sort_id":0,"resolved_title":"Articles","resolved_url":"http:\/\/www.camilleroux.com\/articles\/","excerpt":"","is_article":"0","is_index":"1","has_video":"0","has_image":"0","word_count":"0"},"61726968":{"item_id":"61726968","resolved_id":"61726968","given_url":"https:\/\/github.com\/adamsanderson\/qwandry","given_title":"adamsanderson\/qwandry","favorite":"0","status":"0","time_added":"1389513183","time_updated":"1389513195","time_read":"0","time_favorited":"0","sort_id":1,"resolved_title":"adamsanderson\/qwandry
+        \u00b7 GitHub","resolved_url":"https:\/\/github.com\/adamsanderson\/qwandry","excerpt":"Why
+        spend time trying to remember where libraries, projects, and packages are
+        lurking when your computer can do it faster?  Just type qw and the first few
+        letters of what you''re looking for. By default Qwandry is set up for locating
+        and editing ruby libraries.","is_article":"1","is_index":"1","has_video":"0","has_image":"0","word_count":"107"},"416981487":{"item_id":"416981487","resolved_id":"416981487","given_url":"http:\/\/www.sitepoint.com\/docker-for-rubyists\/","given_title":"Docker
+        for Rubyists - SitePoint","favorite":"0","status":"0","time_added":"1389372521","time_updated":"1389442841","time_read":"0","time_favorited":"0","sort_id":2,"resolved_title":"Docker
+        for Rubyists","resolved_url":"http:\/\/www.sitepoint.com\/docker-for-rubyists\/","excerpt":"Docker\u00a0is
+        a pretty awesome tool and one that I think will have a pretty big impact on
+        how we do development. But, if you haven\u2019t had much experience with Linux
+        containers (or virtual machines), Docker\u2019s underlying ideas as well as
+        its benefits may be a little difficult to understand.","is_article":"1","is_index":"0","has_video":"0","has_image":"1","word_count":"997"},"207907917":{"item_id":"207907917","resolved_id":"207907917","given_url":"https:\/\/practicingruby.com\/articles\/shared\/eislpkhxolnr","given_title":"Issue
+        2.4: Building Enumerable & Enumerator in Ruby - Practicing Ruby","favorite":"0","status":"0","time_added":"1372180011","time_updated":"1390253373","time_read":"0","time_favorited":"0","sort_id":3,"resolved_title":"Building
+        Enumerable & Enumerator in Ruby","resolved_url":"https:\/\/practicingruby.com\/articles\/shared\/eislpkhxolnr","excerpt":"When
+        I first came to Ruby, one of the things that impressed me the most was the
+        killer features provided by the Enumerable module. I eventually also came
+        to love Enumerator, even though it took me a long time to figure out what
+        it was and what one might use it for.","is_article":"1","is_index":"0","has_video":"0","has_image":"0","word_count":"3217"}},"since":1390255353}'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2014 22:02:33 GMT
+recorded_with: VCR 2.8.0
