@@ -1,1 +1,5 @@
-<%= link_to "Sign in with Pocket", user_omniauth_authorize_path(:pocket) %>
+<% if current_user %>
+  <%= link_to "Logout", destroy_user_session_path() %>
+<% else %>
+  <%= link_to "Sign in with Pocket", user_omniauth_authorize_path(:pocket) %>
+<% end %>
