@@ -9,11 +9,7 @@ module Pocket
         c.hook_into :webmock
       end
 
-      Pocket.configure do |config|
-        config.consumer_key = 'xxxx'
-      end
-
-      client = Pocket.client(:access_token => 'xxx' )
+      client = Pocket.client(:access_token => User.first.pocket_code )
 
       VCR.use_cassette 'retrieve_complete' do
         client.retrieve(:detailType => :complete, :sort => :newest)
