@@ -41,12 +41,15 @@ describe Pocket::Importer do
       VCR.use_cassette 'retrieve_complete' do
         ressources = []
         ressources << create(:pocket_ressource)
+        ressources << create(:pocket_ressource, :resolved_id => 252)
+        ressources << create(:pocket_ressource, :resolved_id => 252)
 
         @client.stubs(:ressources).returns(ressources)
 
         @client.import_ressources
-        expect(Ressource.count).to eq 1
+        expect(Ressource.count).to eq 2
         expect(Ressource.first.resolved_id).to eq 107012738
+        expect(Ressource.last.resolved_id).to eq 252
       end
     end
   end

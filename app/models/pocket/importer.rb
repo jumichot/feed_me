@@ -25,7 +25,7 @@ module Pocket
 
     def import_ressources
       ressources.each do |ressource|
-        ressource = ::Ressource.create(:resolved_id => ressource.resolved_id)
+        ressource = ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create
       end
     end
 
