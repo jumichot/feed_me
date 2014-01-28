@@ -40,41 +40,7 @@ describe Pocket::Importer do
     it "can import one ressource" do
       VCR.use_cassette 'retrieve_complete' do
         ressources = []
-        ressources << Pocket::Ressource.new({
-         "item_id" => "107012738",
-         "resolved_id" => "107012738",
-         "given_url" => "http://wp.tutsplus.com/articles/how-to-change-your-wordpress-workflow-for-the-better/",
-         "given_title" => "How To Change Your WordPress Workflow For The Better | Wptuts ",
-         "favorite" => "0",
-         "status" => "0",
-         "time_added" => "1317547695",
-         "time_updated" => "1317717340",
-         "time_read" => "0",
-         "time_favorited" => "0",
-         "sort_id" => 534,
-         "resolved_title" => "How To Change Your WordPress Publishing Workflow For The Better",
-         "resolved_url" => "http://wp.tutsplus.com/articles/how-to-change-your-wordpress-workflow-for-the-better/",
-         "excerpt" => "Running a blog has never been easier. Running a blog well is still a difficult task. Working with a team of people on a blog increases the challenge, so anything that makes that challenge a bit easier should be given a chance to show you its wares.",
-         "is_article" => "1",
-         "is_index" => "0",
-         "has_video" => "0",
-         "has_image" => "1",
-         "word_count" => "2361",
-         "tags" => {
-          "wordpress" => {
-            "item_id" => "107012738",
-            "tag" => "wordpress"
-          }
-          },
-          "authors" => {
-            "3516903" => {
-              "item_id" => "107012738",
-              "author_id" => "3516903",
-              "name" => "Ben Hutton",
-              "url" => "http://wp.tutsplus.com/author/ben/"
-            }
-          }
-        })
+        ressources << create(:pocket_ressource)
 
         @client.stubs(:ressources).returns(ressources)
 
