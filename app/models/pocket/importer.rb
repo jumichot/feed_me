@@ -24,7 +24,10 @@ module Pocket
     end
 
     def import_ressources
+      ressources.each do |ressource|
 
+        ressource = ::Ressource.create(:resolved_id => ressource.resolved_id)
+      end
     end
 
   end
