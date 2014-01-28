@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111220508) do
+ActiveRecord::Schema.define(version: 20140128131312) do
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
@@ -25,6 +25,22 @@ ActiveRecord::Schema.define(version: 20140111220508) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
+
+  create_table "ressources", force: true do |t|
+    t.integer  "resolved_id"
+    t.string   "resolve_title"
+    t.string   "resolve_url"
+    t.boolean  "favorite"
+    t.integer  "status"
+    t.text     "excerpt"
+    t.integer  "word_count"
+    t.datetime "time_added"
+    t.datetime "time_updated"
+    t.datetime "time_read"
+    t.datetime "time_favorited"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "topic_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false

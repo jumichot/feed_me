@@ -1,6 +1,5 @@
-describe Pocket::Ressource do
-  it "initiatize instances variables from hash" do
-    ressource = Pocket::Ressource.new({toto: "tata"})
-    expect(ressource.toto).to eq "tata"
-  end
+require 'spec_helper'
+
+describe Ressource do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
