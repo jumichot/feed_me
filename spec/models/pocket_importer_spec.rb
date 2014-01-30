@@ -37,7 +37,7 @@ describe Pocket::Importer do
 
 
   describe "#import_ressources" do
-    it "can import one ressource" do
+    it "can import ressources by their resolved_id (unique)" do
       VCR.use_cassette 'retrieve_complete' do
         ressources = []
         ressources << create(:pocket_ressource)

@@ -2,8 +2,8 @@ class CreateRessources < ActiveRecord::Migration
   def change
     create_table :ressources do |t|
       t.integer :resolved_id
-      t.string :resolve_title
-      t.string :resolve_url
+      t.string :resolved_title
+      t.string :resolved_url
       t.boolean :favorite
       t.integer :status
       t.text :excerpt

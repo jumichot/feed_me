@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20140128131312) do
 
   create_table "ressources", force: true do |t|
     t.integer  "resolved_id"
-    t.string   "resolve_title"
-    t.string   "resolve_url"
+    t.string   "resolved_title"
+    t.string   "resolved_url"
     t.boolean  "favorite"
     t.integer  "status"
     t.text     "excerpt"
