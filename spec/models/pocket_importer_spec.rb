@@ -55,6 +55,6 @@ describe Pocket::Importer do
   end
 
   def create_ressource tag
-    OpenStruct.new({"tags" => {tag => {"item_id" => "522271957","tag" => "ruby"}}})
+    OpenStruct.new(create(:pocket_ressource,"tags" => {tag => {"item_id" => "522271957","tag" => "ruby"}}))
   end
 end
