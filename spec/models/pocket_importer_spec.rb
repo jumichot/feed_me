@@ -39,17 +39,17 @@ describe Pocket::Importer do
   describe "#import_ressources" do
     it "can import ressources by their resolved_id (unique)" do
       VCR.use_cassette 'retrieve_complete' do
-        ressources = []
-        ressources << create(:pocket_ressource)
-        ressources << create(:pocket_ressource, :resolved_id => 252)
-        ressources << create(:pocket_ressource, :resolved_id => 252)
+        res1 = create(:pocket_ressource)
+        res2 = create(:pocket_ressource, :resolved_id => 252)
+        res3 = create(:pocket_ressource, :resolved_id => 252)
+        ressources = [res1, res2, res3]
 
         @client.stubs(:ressources).returns(ressources)
-
         @client.import_ressources
+
         expect(Ressource.count).to eq 2
-        expect(Ressource.first.resolved_id).to eq 107012738
-        expect(Ressource.last.resolved_id).to eq 252
+        expect(Ressource.first.resolved_id).to eq res1.resolved_id.to_i
+        expect(Ressource.last.resolved_id).to eq res2.resolved_id.to_i
       end
     end
   end
