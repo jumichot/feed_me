@@ -10,7 +10,7 @@ describe Pocket::Importer do
     it "retrieve all ressources" do
       VCR.use_cassette 'retrieve_complete' do
         ressources =  @client.ressources
-        expect(ressources.first.class).to eq Pocket::Ressource
+        expect(ressources.first.class).to eq OpenStruct
       end
     end
   end
@@ -55,6 +55,6 @@ describe Pocket::Importer do
   end
 
   def create_ressource tag
-    Pocket::Ressource.new({"tags" => {tag => {"item_id" => "522271957","tag" => "ruby"}}})
+    OpenStruct.new({"tags" => {tag => {"item_id" => "522271957","tag" => "ruby"}}})
   end
 end

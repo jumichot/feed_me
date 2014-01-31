@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :pocket_ressource, :class => Pocket::Ressource do
+  factory :pocket_ressource, :class => OpenStruct do
     skip_create
     item_id  "107012738"
     resolved_id  "107012738"

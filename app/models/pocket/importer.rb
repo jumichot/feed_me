@@ -8,7 +8,7 @@ module Pocket
     def ressources
       ressources = @client.retrieve(:detailType => :complete, :sort => :newest)
       ressources["list"].inject([]) do |result, hash|
-        result << Pocket::Ressource.new(hash[1])
+        result << OpenStruct.new(hash[1])
       end
     end
 
