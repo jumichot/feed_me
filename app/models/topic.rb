@@ -1,4 +1,5 @@
 class Topic < ActiveRecord::Base
+  has_many :ressources
 
   acts_as_tree
 
