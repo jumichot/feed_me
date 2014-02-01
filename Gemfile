@@ -21,6 +21,9 @@ group :doc do
 end
 
 group :development, :test do
+  gem "growl"
+  gem 'guard-rspec', require: false
+  gem "rb-fsevent", require: false
   gem 'rspec-rails'
   gem "factory_girl_rails", "~> 4.0"
   gem 'awesome_print', :require => 'ap'
