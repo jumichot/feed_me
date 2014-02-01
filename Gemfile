@@ -30,7 +30,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', "1.15.0"
   gem 'mocha'
   gem 'fuubar', :git => 'git@github.com:jumichot/fuubar.git'
 end
