@@ -1,10 +1,15 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
+FactoryGirl.define do
+  sequence :resolved_id do |n|
+    n
+  end
+end
 
 FactoryGirl.define do
   factory :pocket_ressource, :class => OpenStruct do
     skip_create
     item_id  "107012738"
-    resolved_id  "107012738"
+    resolved_id
     given_url  "http://wp.tutsplus.com/articles/how-to-change-your-wordpress-workflow-for-the-better/"
     given_title  "How To Change Your WordPress Workflow For The Better | Wptuts "
     favorite  "0"

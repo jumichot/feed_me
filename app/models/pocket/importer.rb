@@ -17,16 +17,16 @@ module Pocket
         tags = ressource.try(:tags)
         next if tags.nil?
 
+        ressrc = create_ressource ressource
         tags.each do |tag|
-          Topic.where(name: tag[0]).first_or_create if tag[0].start_with?('#')
+          topic = Topic.where(name: tag[0]).first_or_create if tag[0].start_with?('#')
+          topic.ressources << ressrc if topic
         end
       end
     end
 
-    def import_ressources
-      ressources.each do |ressource|
-        ressource = ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create
-      end
+    def create_ressource ressource
+      ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create
     end
 
   end
