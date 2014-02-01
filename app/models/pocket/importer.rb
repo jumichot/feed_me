@@ -14,13 +14,15 @@ module Pocket
 
     def import_topics
       ressources.each do |ressource|
+        ressrc = create_ressource ressource
+
         tags = ressource.try(:tags)
         next if tags.nil?
 
-        ressrc = create_ressource ressource
         tags.each do |tag|
-          topic = Topic.where(name: tag[0]).first_or_create if tag[0].start_with?('#')
-          topic.ressources << ressrc if topic
+          ressrc.tag_list.add(tag[0])
+          ressrc.save!
+          Topic.where(name: tag[0]).first_or_create if tag[0].start_with?('#')
         end
       end
     end

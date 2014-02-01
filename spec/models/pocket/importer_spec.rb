@@ -21,10 +21,8 @@ describe Pocket::Importer do
         ressources = []
         ressources << create_ressource("#ruby")
         ressources << create_ressource("#ruby")
-        ressources << create_ressource("ruby")
         ressources << create_ressource("useless")
         ressources << create_ressource("useless")
-        ressources << create_ressource("tool")
         ressources << create_ressource("#tool")
         @client.stubs(:ressources).returns(ressources)
 
@@ -49,7 +47,7 @@ describe Pocket::Importer do
 
 
   describe "#import_ressources" do
-    it "can create one ressource if resolved_id unique" do
+    it "can import one ressource if resolved_id unique" do
       VCR.use_cassette 'retrieve_complete' do
         res1 = create(:pocket_ressource)
         res2 = create(:pocket_ressource, :resolved_id => 252)

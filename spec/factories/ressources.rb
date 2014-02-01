@@ -4,11 +4,13 @@ FactoryGirl.define do
   sequence :resolved_url do |n|
     "site#{n}.com"
   end
+end
 
+FactoryGirl.define do
   factory :ressource do
-    resolved_id 1
+    resolved_id
     resolved_title "the title"
-    resolved_url "the url"
+    resolved_url
     excerpt "MyText"
     word_count 1
     favorite ""
