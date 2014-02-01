@@ -7,8 +7,8 @@ FactoryGirl.define do
 
   factory :ressource do
     resolved_id 1
-    resolved_title
-    resolved_url "MyString"
+    resolved_title "the title"
+    resolved_url "the url"
     excerpt "MyText"
     word_count 1
     favorite ""

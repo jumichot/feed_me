@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'closure_tree'
+gem 'acts-as-taggable-on'
 
 gem 'rails_admin'
 

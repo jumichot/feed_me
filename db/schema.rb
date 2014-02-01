@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140131212639) do
+ActiveRecord::Schema.define(version: 20140201194319) do
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
@@ -44,6 +44,24 @@ ActiveRecord::Schema.define(version: 20140131212639) do
   end
 
   add_index "ressources", ["topic_id"], name: "index_ressources_on_topic_id"
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+
+  create_table "tags", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
   create_table "topic_hierarchies", id: false, force: true do |t|
     t.integer "ancestor_id",   null: false
