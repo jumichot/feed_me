@@ -21,7 +21,7 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails'
   gem "factory_girl_rails", "~> 4.0"
   gem 'awesome_print', :require => 'ap'
 end
@@ -32,6 +32,7 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'mocha'
+  gem 'fuubar', :git => 'git@github.com:jumichot/fuubar.git'
 end
 
 
