@@ -20,7 +20,7 @@ FactoryGirl.define do
     time_favorited  "0"
     sort_id  534
     resolved_title  "How To Change Your WordPress Publishing Workflow For The Better"
-    resolved_url  "http://wp.tutsplus.com/articles/how-to-change-your-wordpress-workflow-for-the-better/"
+    resolved_url
     excerpt  "Running a blog has never been easier. Running a blog well is still a difficult task. Working with a team of people on a blog increases the challenge, so anything that makes that challenge a bit easier should be given a chance to show you its wares."
     is_article  "1"
     is_index  "0"
