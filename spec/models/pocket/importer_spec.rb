@@ -46,11 +46,23 @@ describe Pocket::Importer do
       expect(Ressource.count).to eq 3
     end
 
+    it "update ressources if pocket ressources have changed" do
+      create(:ressource, resolved_id: 58, resolved_title: "old title")
+      ressources = [create(:pocket_ressource,"resolved_id" => "58", "resolved_title" => "new title" )]
+
+      @client.stubs(:ressources).returns(ressources)
+      @client.import!
+
+      expect(Ressource.first.resolved_title).to eq "new title"
+    end
+  end
+
   describe "#create_ressource" do
     it "create all the fiels wanted" do
-      ressource = create(:pocket_ressource,"resolved_url" => "toto.com", "time_favorited" => "1317547695", "time_read" => "1317547695")
+      ressource = create(:pocket_ressource,"resolved_title" => "toto en vacances","resolved_url" => "toto.com", "time_favorited" => "1317547695", "time_read" => "1317547695")
       created_ressource = @client.create_ressource(ressource)
       expect(created_ressource.resolved_url).to eq "toto.com"
+      expect(created_ressource.resolved_title).to eq "toto en vacances"
       expect(created_ressource.time_added.to_s).to eq "2011-10-02 00:00:00 UTC"
       expect(created_ressource.time_updated.to_s).to eq "2011-10-04 00:00:00 UTC"
       expect(created_ressource.time_favorited.to_s).to eq "2011-10-02 00:00:00 UTC"
