@@ -12,7 +12,7 @@ module Pocket
       end
     end
 
-    def import_topics
+    def import!
       ressources.each do |ressource|
         ressrc = create_ressource ressource
 
@@ -28,7 +28,18 @@ module Pocket
     end
 
     def create_ressource ressource
-      ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create
+      ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create do |res|
+        res.resolved_url = ressource.resolved_url
+        res.time_added = format_pocket_date(ressource.time_added)
+        res.time_updated = format_pocket_date(ressource.time_updated)
+        res.time_favorited = format_pocket_date(ressource.time_favorited)
+        res.time_read = format_pocket_date(ressource.time_read)
+        res.save
+      end
+    end
+
+    def format_pocket_date(date)
+      Date.strptime(date, '%s') unless date == "0"
     end
 
   end
