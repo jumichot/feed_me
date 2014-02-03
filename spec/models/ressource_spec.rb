@@ -3,6 +3,8 @@ require 'spec_helper'
 describe Ressource do
   it { should validate_uniqueness_of(:resolved_id)}
   it { should validate_uniqueness_of(:resolved_url)}
+  it { should validate_presence_of(:resolved_id)}
+  it { should validate_presence_of(:resolved_url)}
 
   it "has a tag list" do
     ressource = create(:ressource)
