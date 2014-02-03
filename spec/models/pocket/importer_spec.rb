@@ -26,22 +26,16 @@ describe Pocket::Importer do
 
   describe "#import!" do
     it "import only topics that start with # with no duplicates" do
-      VCR.use_cassette 'retrieve_complete' do
-        ressources = create_ressources ["#ruby","#ruby","useless","useless","#tool"]
-        @client.stubs(:ressources).returns(ressources)
-
-        @client.import!
-
-        expect(Topic.all.map{|t| t.name}).to eq ["#ruby","#tool"]
-      end
+      ressources = create_ressources ["#ruby","#ruby","useless","useless","#tool"]
+      @client.stubs(:ressources).returns(ressources)
+      @client.import!
+      expect(Topic.all.map{|t| t.name}).to eq ["#ruby","#tool"]
     end
 
     it "create relationship with ressources" do
       ressources = create_ressources ["#ruby","#ruby","ruby"]
       @client.stubs(:ressources).returns(ressources)
-
       @client.import!
-
       expect(Topic.first.ressources.count).to eq 2
       expect(Ressource.count).to eq 3
     end
@@ -49,10 +43,8 @@ describe Pocket::Importer do
     it "update ressources if pocket ressources have changed" do
       create(:ressource, resolved_id: 58, resolved_title: "old title")
       ressources = [create(:pocket_ressource,"resolved_id" => "58", "resolved_title" => "new title" )]
-
       @client.stubs(:ressources).returns(ressources)
       @client.import!
-
       expect(Ressource.first.resolved_title).to eq "new title"
     end
   end
