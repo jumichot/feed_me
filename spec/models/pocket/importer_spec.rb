@@ -69,5 +69,11 @@ describe Pocket::Importer do
       expect(created_ressource.time_favorited).to be_nil
       expect(created_ressource.time_read).to be_nil
     end
+
+    it "take the given_title if the resolved_title is nil" do
+      ressource = create(:pocket_ressource, "resolved_title" => "", "given_title" => "google.fr")
+      created_ressource = @client.create_ressource(ressource)
+      expect(created_ressource.resolved_title).not_to eq ""
+    end
   end
 end

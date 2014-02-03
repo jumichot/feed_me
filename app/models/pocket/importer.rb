@@ -28,9 +28,9 @@ module Pocket
     end
 
     def create_ressource ressource
-      res = ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create 
+      res = ::Ressource.where(:resolved_id => ressource.resolved_id).first_or_create
       res.resolved_url = ressource.resolved_url
-      res.resolved_title = ressource.resolved_title
+      res.resolved_title = (ressource.resolved_title == "") ? ressource.given_title : ressource.resolved_title
       res.time_added = format_pocket_date(ressource.time_added)
       res.time_updated = format_pocket_date(ressource.time_updated)
       res.time_favorited = format_pocket_date(ressource.time_favorited)
