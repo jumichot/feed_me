@@ -35,8 +35,16 @@ module Pocket
       res.time_updated = format_pocket_date(ressource.time_updated)
       res.time_favorited = format_pocket_date(ressource.time_favorited)
       res.time_read = format_pocket_date(ressource.time_read)
+      create_tags_ressource(res, ressource) 
       res.save
       res
+    end
+
+    def create_tags_ressource res, ressource
+      return unless ressource.tags
+      ressource.tags.each do |tag|
+        res.tag_list.add tag[0]
+      end
     end
 
     def format_pocket_date(date)

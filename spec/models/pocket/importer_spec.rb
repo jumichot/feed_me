@@ -75,5 +75,10 @@ describe Pocket::Importer do
       created_ressource = @client.create_ressource(ressource)
       expect(created_ressource.resolved_title).not_to eq ""
     end
+    it "add tags to the ressource" do
+      ressource = create(:pocket_ressource,"tags" => {"ruby" => {"item_id" => "522271957","tag" => "ruby"},"performance" => {"item_id" => "235917024","tag"=> "performance"},"tool" => {"item_id" =>  "235917024","tag" => "tool"}})
+      created_ressource = @client.create_ressource(ressource)
+      expect(created_ressource.tag_list).to eq ["ruby","performance","tool"]
+    end
   end
 end
